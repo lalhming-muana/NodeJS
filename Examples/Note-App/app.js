@@ -1,10 +1,6 @@
-const fs = require('fs')
- 
 
-fs.writeFileSync('notes.txt','This file was created by NODE JS')
+const  getNotes = require('./notes.js') // Here display can have a name different from the one in utils.js.
 
-/* Task
-to append a text to the file using fileAppendSync
-Run the script and check the file */
+const msg = getNotes()
 
-fs.appendFileSync('notes.txt','\nThis is a newline')
+console.log(msg)
