@@ -1,5 +1,7 @@
 const validator = require('validator')
 const chalk = require('chalk')
+const yargs = require('yargs')
+
 const  getNotes = require('./notes.js') // Here display can have a name different from the one in utils.js.
 
 const msg = getNotes()
@@ -28,4 +30,5 @@ if(command === 'remove'){
 // Adding another argument. Title in the argument list  and see the argv dump
 
 console.log(process.argv)
+console.log(yargs.argv)
 
