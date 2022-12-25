@@ -1,3 +1,5 @@
+// Go to weatherstack and register to get a free API key
+
 
 // here you can use postman-request from npm
 // this version of request is deprecated
