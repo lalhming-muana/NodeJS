@@ -16,4 +16,4 @@ request({url: url}, (error, response) => {
     const data = JSON.parse(response.body);
     console.log(data.current);
 
-})
+}) 
