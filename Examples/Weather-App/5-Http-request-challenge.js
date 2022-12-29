@@ -4,7 +4,7 @@
 
 const request = require('request')
 
-const geocodeurl ='https://api.mapbox.com/geocoding/v5/mapbox.places/AIzawl.json?access_token=pk.eyJ1IjoibGFsaG1pbmciLCJhIjoiY2xjN3F5OWc2MDZqdjNycGNhNHQ2aHd0ZSJ9.e32VjUjDqFGLVYcIqlqFxw'
+const geocodeurl ='https://api.mapbox.com/geocoding/v5/mapbox.places/AIzawl.json?access_token=APIKEYDAHTURH'
 
 request({url: geocodeurl, json: true}, (error, response) => {
 
