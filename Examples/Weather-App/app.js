@@ -1,8 +1,6 @@
 
-// Here we learn how to customize the request 
-
-// to change unit add &unit=f at the end of the url string
-// to learn how to change the units read the documentation
+// Geocoding service (Take a location and get the latitude and logitude )
+// from the API
 
 
 const request = require('request')
@@ -11,10 +9,7 @@ const url ='http://api.weatherstack.com/current?access_key=3034abb55d8bad1140b76
 
 request({url: url, json: true}, (error, response) => {
 
-// the data is usually in the body section of the response
 
-// print a small forecast to the user
-// print the degree outside, and chance of rain.
 
     console.log("it is "+response.body.current.temperature+" fahrenheit outside it feels like "+response.body.current.feelslike+" fahrenheit inside");
     console.log(response.body.current.weather_descriptions[0]);
