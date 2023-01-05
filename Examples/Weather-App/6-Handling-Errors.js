@@ -2,17 +2,20 @@
 
 const request = require('request')
 
-const geourl = 'https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=pk.eyJ1IjoibGFsaG1pbmciLCJhIjoiY2xjOTJmc2tkMWxyeDN2cDZ1eHAwYjVmbyJ9.IEHEi1VIVOjB9Qy1AttvvA'
+const geourl = 'https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=tokendahjtuir'
 
-request({url: geourl, json: true}, (error,request)=>{
+request({url: geourl, json: true}, (error,response)=>{
 
     if(error){
         console.log('Unable to connect to mapbox.com \nplease check your internet connection');
     }
+    else if (response.body.error){
+        console.log('unable to find location');
+    }
     else{
-        console.log(request.body.features[0].geometry.coordinates);
+        console.log('response successful');
     }
   
-}
+} 
 
 )
