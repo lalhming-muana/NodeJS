@@ -7,7 +7,7 @@
 
 const request = require('request')
 
-const url ='http://api.weatherstack.com/current?access_key=3034abb55d8bad1140b765253d4da48e&query=23.6249,92.7245&units=f'
+const url ='http://api.weatherstack.com/current?access_key=3034a48e&query=23.6249,92.7245&units=f'
 
 request({url: url, json: true}, (error, response) => {
 
