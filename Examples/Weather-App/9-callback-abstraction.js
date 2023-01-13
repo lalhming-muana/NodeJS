@@ -4,28 +4,13 @@ In Node.js, a callback is a function that is passed as an argument to another fu
 */
 
 const request = require("request");
+const geocode = require('./utils/geocode')
 
 
 
-const geocode =(address, callback)=>{
-    const geourl= 'https://api.mapbox.com/geocoding/v5/mapbox.places/'+ encodeURIComponent(address) +'.json?access_token=pk.eyJ1IjoibGFsaG1pbmciLCJhIjoiY2xjOTJmc2tkMWxyeDN2cDZ1eHAwYjVmbyJ9.IEHEi1VIVOjB9Qy1AttvvA'
-
-    request({url: geourl, json: true}, (error, response)=>{
-
-        if (error){
-             callback('Unable to connect to location services', undefined);      
-        }
-
-        else if(response.body.features.length === 0){
-            callback('unable to find location. Search for another place. ',undefined);
-        }
-
-    })
-    
-}
 
 
-geocode('Philadelphia', (error, data)=>{
+geocode('Aizawl', (error, data)=>{
     console.log('Error: ',  error);
     console.log('Data: ', data);
 })
