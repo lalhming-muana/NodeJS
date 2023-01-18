@@ -5,7 +5,7 @@ const app = express()
 // in app.get('') the url is empty for the homepage
 
 app.get('',(req, res)=>{
-    res.send('Hello express')
+    res.send('<h1>Express server starting up</h1>')
 })
 //app.com
 //app.help
@@ -13,9 +13,21 @@ app.get('',(req, res)=>{
 
 
 app.get('/help',(req, res)=>{
-    res.send('this is the help page');
+    res.send({
+        name: "Lalhming",
+        age: 40
+    });
 
 })
+
+app.get('/weather',(req, res)=>{
+    res.send({
+        forecast: "It is sunny",
+        location: 'Aizawl'
+    });
+
+})
+
 
 
 app.get('/about',(req,res)=>{
