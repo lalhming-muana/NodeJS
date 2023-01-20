@@ -19,19 +19,19 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  color: $text;
-  background: $white;
+  color: @text;
+  background: @white;
   text-rendering: optimizeLegibility;
 }
 
 h1, h2, h3 {
   font-family: 'EB Garamond', serif;
-  color: $black;
+  color: @black;
   line-height: 1.1;
 }
 
 h2, h3 {
-  color: $black;
+  color: @black;
   font-weight: 400;
 }
 
@@ -62,10 +62,10 @@ p {
 }
 
 a {
-  color: $gray;
+  color: @gray;
   text-decoration: none;
   &:hover {
-    color: $black;
+    color: @black;
   }
 }
 
@@ -122,7 +122,7 @@ nav .grid {
 }
 
 #logo {
-  color: $black;
+  color: @black;
   font-weight: 700;
   font-size: 0.875rem;
   letter-spacing: 0.125rem;
@@ -161,7 +161,7 @@ footer {
   text-align: center;
 }
 
-@media (min-width: $md) {
+@media (min-width: @md) {
   body {
     font-size: 1.125rem;
   }
