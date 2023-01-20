@@ -1,12 +1,20 @@
 const express = require('express')
+const path = require('path')
 
 const app = express()
 
+
+
+
+const publicDirectoryPath= path.join(__dirname,'../public');
+
 // in app.get('') the url is empty for the homepage
 
-app.get('',(req, res)=>{
-    res.send('<h1>Express server starting up</h1>')
-})
+// app.use is a way to customize the server
+app.use(express.static(publicDirectoryPath))
+
+
+
 //app.com
 //app.help
 //app.about
@@ -30,10 +38,6 @@ app.get('/weather',(req, res)=>{
 
 
 
-app.get('/about',(req,res)=>{
-    res.send('This is a weather forecast website');
-
-})
 
 // The code below runs the server and will run it unless you shut it down manually
 
