@@ -21,12 +21,22 @@ app.use(express.static(publicDirectoryPath))
 //app.about
 
 app.get('', (req, res)=>{
-    res.render('index');
+    res.render('index',{
+         title: 'Weather app',
+         name: 'Howard'
+    });
+})
+
+app.get('/about',(req, res)=>{
+    res.render('about',{
+        title: "About me",
+        name: 'Howard'
+    })
 })
 
 
 app.get('/help',(req, res)=>{
-    res.send({
+    res.render('help',{
         name: "Lalhming",
         age: 40
     });
