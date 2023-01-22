@@ -5,6 +5,7 @@ const app = express()
 
 
 
+app.set('view engine', 'hbs'); // sets the view engine to use 
 
 const publicDirectoryPath= path.join(__dirname,'../public');
 
@@ -18,6 +19,10 @@ app.use(express.static(publicDirectoryPath))
 //app.com
 //app.help
 //app.about
+
+app.get('', (req, res)=>{
+    res.render('index');
+})
 
 
 app.get('/help',(req, res)=>{
