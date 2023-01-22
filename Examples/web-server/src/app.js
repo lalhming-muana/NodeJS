@@ -5,20 +5,24 @@ const app = express()
 
 
 
-app.set('view engine', 'hbs'); // sets the view engine to use 
-
+// Define the paths for configuring express.js
+const viewsDirectory=path.join(__dirname,'../templates')
 const publicDirectoryPath= path.join(__dirname,'../public');
 
-// in app.get('') the url is empty for the homepage
+
+
+// Setup the handlebars engine and the views directory
+app.set('view engine', 'hbs'); // sets which view engine we are going to use
+app.set('views',viewsDirectory) // Customize the views directory by changing the name to templates
+
+
 
 // app.use is a way to customize the server
+// Setup the static directory for serving static pages
 app.use(express.static(publicDirectoryPath))
 
 
-
-//app.com
-//app.help
-//app.about
+// in app.get('') the url is empty for the homepage
 
 app.get('', (req, res)=>{
     res.render('index',{
