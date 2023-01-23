@@ -6,8 +6,9 @@ const app = express()
 
 
 // Define the paths for configuring express.js
-const viewsDirectory=path.join(__dirname,'../templates')
+const viewsDirectory=path.join(__dirname,'../templates/views')
 const publicDirectoryPath= path.join(__dirname,'../public');
+const partialsPath= path.join(__dirname,'../templates/partials')
 
 
 
